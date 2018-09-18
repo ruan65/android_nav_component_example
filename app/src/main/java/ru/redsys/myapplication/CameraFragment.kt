@@ -20,12 +20,13 @@ class CameraFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         button_photos.setOnClickListener {
+
             val random = Random()
 
-//            val nextAction = CameraFragmentDirections.nextAction()
-//            nextAction.setNumOfPhotos(random.nextInt(100))
-//
-//            Navigation.findNavController(it).navigate(nextAction)
+            val nexAction = CameraFragmentDirections.nextAction()
+            nexAction.setNumOfPhotos(random.nextInt(77))
+
+            Navigation.findNavController(it).navigate(nexAction)
         }
     }
 }
