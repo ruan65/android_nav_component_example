@@ -21,12 +21,12 @@ class PhotosFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         button_home.setOnClickListener {
-//            Navigation.findNavController(it).navigate(R.id.next_action)
+            Navigation.findNavController(it).navigate(R.id.next_action)
         }
 
-//        arguments?.let {
-//            val safeArgs = PhotosFragmentArgs.fromBundle(it)
-//            textView_num.text = "Number of photos: ${safeArgs.numOfPhotos}"
-//        }
+        arguments?.let {
+            val safeArgs = PhotosFragmentArgs.fromBundle(it)
+            textView_num.text = "Number of photos: ${safeArgs.numOfPhotos}"
+        }
     }
 }
