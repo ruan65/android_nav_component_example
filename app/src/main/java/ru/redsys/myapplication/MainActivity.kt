@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import androidx.navigation.findNavController
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -56,8 +57,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    override fun onSupportNavigateUp(): Boolean {
+//    override fun onSupportNavigateUp(): Boolean {
+//
+//        return NavigationUI.navigateUp(drawer_layout,  Navigation.findNavController(this, R.id.nav_host_fragment))
+//    }
 
-        return NavigationUI.navigateUp(drawer_layout,  Navigation.findNavController(this, R.id.nav_host_fragment))
-    }
+    override fun onSupportNavigateUp() : Boolean = findNavController(R.id.nav_host_fragment).navigateUp()
+
 }
